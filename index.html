@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statemnts and Loops</title>
+</head>
+
+<body>
+    <h1>Conditional Statemnts and Loops</h1>
+    <script>
+        // Question No 1
+        console.log("*****************Task 1*********************");
+        for (let i = 0; i < 10; i++) {
+            console.log(`Value is ${i + 1}`);
+        }
+        // // Question No 2
+        console.log("*******************Task 2*******************")
+        let i = 1;
+        while (i <= 20) {
+            if (i % 2 == 0) {
+                console.log("Even Number is", i);
+            }
+            i++;
+        }
+        // Question No 3
+        console.log("*********************Task 3************************");
+        let firstNum=0;
+        let secondNum=1;
+        let n=prompt("Enter value upto find fibbonacii Series");
+        let nextTerm=firstNum+secondNum;
+        console.log(firstNum);
+        console.log(secondNum);
+        for(let i=2;i<=n;i++)
+        {
+            console.log(nextTerm);
+            firstNum=secondNum;
+            secondNum=nextTerm;
+            nextTerm=firstNum+secondNum;
+        }
+       // Question No 4
+        console.log("*********************Task 4************************");
+        let flag=1;
+        let num=prompt("Enter any number to check whether it is prime or not: ","");
+        for(let i=2;i<num;i++)
+        {
+            if(num%i==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        if (flag) {
+            console.log(`${num} is a Prime Number`);
+        }
+        else{
+            console.log(`${num} is not a Prime Number`);
+        }
+        console.log("*********************Task 5************************");
+        let sum=0;
+        let arr=[1,2,3,4,5];
+        for(let i=0;i<arr.length;i++)
+        {
+            sum+=arr[i];
+        }
+        console.log("Sum of the elements in the list are ",sum)
+        console.log("**********************Task 06****************************");
+        for(let i=10;i>=1;i--)
+        {
+            console.log(`Countdown value is ${i}`);
+        }
+        console.log("***********************Question No 7*************************************");
+        let str=prompt("Enter a String to check whether it is palindome or not","");
+        let num=0;
+        let flag=1;
+        let len=str.length;
+        while(num<=len)
+        {
+            if(str[num]!=str[len-num-1])
+            {
+                flag=0;
+                break;
+            }
+            num++;
+        }
+        if(flag)
+        {
+            console.log(`${str} is Palindrome String`);
+        }
+        else{
+            console.log(`${str} Not a Palindrome String`);
+        }
+        console.log("***********************Question No 8*************************************");
+
+        let arr1=[2,3,-1,-2,7];
+        let max=0;
+        for(let i=0;i<arr1.length;i++)
+        {
+            if(max<arr1[i])
+            {
+                max=arr1[i];
+            }
+        }
+        console.log(`Largest Element in the Array are ${max}`);
+        console.log("***********************Question No 9*************************************");
+        let num = 0;
+        let guess;
+
+        while (true) {
+            num = Math.trunc(Math.random() * 100);
+            guess = parseInt(prompt("Computer will guess now. Your turn to guess the correct number:"));
+            if (isNaN(guess) || guess > 100) {
+                continue;
+            }
+            if (num > guess) {
+                console.log("Number is Too Low!");
+            } else if (num < guess) {
+                console.log("Number is Too High!");
+            } else {
+                console.log("Congratulations! You guessed it correctly.");
+                break;
+            }
+        }
+
+        console.log("***********************Question No 10*************************************");
+        let fact=1;
+        let num=prompt("Enter any number to find it's Factorial","");
+        for(let i=1;i<=num;i++)
+        {
+            fact=fact*i;
+        }
+        console.log(`Factorial of ${num} is ${fact}`);
+        console.log("***********************Question No 11*************************************");
+        let table=prompt("Enter any number to print it's Table","");
+        console.log(`You want to print the table of ${table}`);
+        for(let i=1;i<=10;i++)
+        {
+            console.log(`${table} X ${i} = ${table*i}`);
+        }
+        console.log("*************************Task 12*********************************");
+        let str = ["hello", "apple", "Orange"];
+        for (let i = 0; i < str.length; i++) {
+            let firstLetter = str[i][0].toLowerCase();
+            if (firstLetter === 'a' || firstLetter === 'e' || firstLetter === 'i' || firstLetter === 'o' || firstLetter === 'u') {
+                console.log(str[i]);
+            }
+        }
+        let sum=0;
+        let count=0;
+        let avg=[1,2,3,4,5,6];
+        for(let i=0;i<avg.length;i++)
+        {
+            sum+=avg[i];
+            count++;
+        }
+        console.log("Average:",sum/count);
+    </script>
+</body>
+
+</html>
